@@ -1,7 +1,7 @@
 package ru.practicum;
 
 public class FileLoadException extends RuntimeException {
-  public FileLoadException(String message) {
-    super(message);
-  }
+    public FileLoadException(String message) {
+        super(message);
+    }
 }
