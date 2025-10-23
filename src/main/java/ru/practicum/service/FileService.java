@@ -1,5 +1,7 @@
 package ru.practicum.service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ru.practicum.exception.FileLoadException;
 import ru.practicum.model.Employee;
 
@@ -8,6 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FileService implements FileServiceInterface {
+    private static final Logger log = LoggerFactory.getLogger(FileService.class);
+
     @Override
     public void saveEmployeesToFile(List<Employee> employees, String filename) {
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
@@ -34,7 +38,7 @@ public class FileService implements FileServiceInterface {
                 lineNumber++;
                 String[] parts = line.split(",");
                 if (parts.length != 4) {
-                    System.err.println("Ошибка формата в строке " + lineNumber + ": " + line);
+                    log.error("Ошибка формата в строке {}: {}", lineNumber, line);
                     continue;
                 }
                 try {
@@ -46,7 +50,7 @@ public class FileService implements FileServiceInterface {
 
                     employees.add(emp);
                 } catch (NumberFormatException ex) {
-                    System.err.println("Ошибка преобразования числа в строке " + lineNumber + ": " + line);
+                    log.error("Ошибка преобразования числа в строке {}: {}", lineNumber, line);
                 }
             }
         } catch (IOException e) {
