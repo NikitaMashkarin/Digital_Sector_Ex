@@ -1,14 +1,13 @@
 package ru.practicum.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-@AllArgsConstructor
+@Getter
+@Setter
+@ToString
 @NoArgsConstructor
+@AllArgsConstructor
 public class Employee {
     @EqualsAndHashCode.Include
     private int id;
