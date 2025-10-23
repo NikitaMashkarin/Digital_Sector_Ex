@@ -1,4 +1,6 @@
-package ru.practicum;
+package ru.practicum.service;
+
+import ru.practicum.model.Employee;
 
 import java.util.List;
 

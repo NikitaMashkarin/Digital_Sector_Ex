@@ -1,5 +1,5 @@
 import org.junit.jupiter.api.Test;
-import ru.practicum.Employee;
+import ru.practicum.model.Employee;
 
 import static org.junit.jupiter.api.Assertions.*;
 

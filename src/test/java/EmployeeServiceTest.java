@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.Test;
-import ru.practicum.*;
+import ru.practicum.model.Employee;
+import ru.practicum.service.EmployeeService;
+import ru.practicum.service.EmployeeServiceInterface;
 
 import java.util.List;
 import java.util.Map;

@@ -1,10 +1,13 @@
-package ru.practicum;
+package ru.practicum.service;
+
+import ru.practicum.exception.EmployeeNotFoundException;
+import ru.practicum.model.Employee;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class EmployeeService implements EmployeeServiceInterface{
+public class EmployeeService implements EmployeeServiceInterface {
     @Override
     public Employee getEmployeeById(int id, List<Employee> employees) {
         for (Employee e : employees)

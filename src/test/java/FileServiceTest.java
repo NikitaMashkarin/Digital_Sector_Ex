@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.*;
-import ru.practicum.Employee;
-import ru.practicum.FileService;
-import ru.practicum.FileServiceInterface;
+import ru.practicum.model.Employee;
+import ru.practicum.service.FileService;
+import ru.practicum.service.FileServiceInterface;
 
 import java.io.File;
 import java.util.List;
